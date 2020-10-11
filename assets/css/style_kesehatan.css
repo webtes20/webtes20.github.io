@@ -9,12 +9,7 @@
 
 .kesehatan .container-fluid{
     margin: auto;
-    padding: auto;
-}
-
-.kesehatan .content{
-    height: 100%;
-    width: 100%;
+    padding: 60px 60px 300px 60px
 }
   
   .kesehatan .section-title h2 {
