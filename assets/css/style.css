@@ -7,7 +7,7 @@ body {
 }
 
 a {
-  color: #7cc576;
+  color: #008C8C;
 }
 
 a:hover {
@@ -16,7 +16,7 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "century gotic", sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -61,32 +61,33 @@ h1, h2, h3, h4, h5, h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  height: 100px;
+  height: 60px;
   transition: all 0.5s;
   z-index: 997;
   transition: all 0.5s;
-  background: #fff;
-  box-shadow: 0 4px 10px -3px rgba(191, 191, 191, 0.5);
+  background: rgb(243, 239, 239);
+  box-shadow: 0 px 10px -3px rgba(191, 191, 191, 0.5);
 }
 
-#header .logo h1 {
-  font-size: 28px;
-  margin: 0;
-  line-height: 1;
-  font-weight: 400;
-  letter-spacing: 3px;
-  text-transform: uppercase;
+#header .logo {
+  font-size: 30px;
+  margin: 10;
+  padding:0;
+  line-height: 0;
+  font-weight: 0;
+  letter-spacing: 2px;
+  vertical-align: middle;
 }
 
-#header .logo h1 a, #header .logo h1 a:hover {
+#header .logo a {
   color: #fff;
-  text-decoration: none;
+  vertical-align: middle;
+  text-align: center;
 }
 
 #header .logo img {
-  padding: 0;
-  margin: 0;
-  max-height: 40px;
+  max-height: 50px;
+  vertical-align: middle;
 }
 
 @media (max-width: 992px) {
@@ -101,6 +102,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Desktop Navigation */
 .nav-menu {
   width: 100%;
+  float: right;
 }
 
 .nav-menu, .nav-menu * {
@@ -112,13 +114,14 @@ h1, h2, h3, h4, h5, h6 {
 .nav-menu > ul > li {
   position: relative;
   white-space: nowrap;
-  float: left;
+  float: center;
 }
 
 .nav-menu .nav-inner {
   display: flex;
   justify-content: center;
   align-items: center;
+  float: right;
 }
 
 .nav-menu .nav-logo {
@@ -128,11 +131,11 @@ h1, h2, h3, h4, h5, h6 {
 .nav-menu a {
   display: block;
   position: relative;
-  color: #151515;
+  color: #000000;
   padding: 15px 25px;
   transition: 0.3s;
-  font-size: 15px;
-  text-transform: uppercase;
+  font-size: 18px;
+  /* text-transform: uppercase; */
   font-family: "Open Sans", sans-serif;
 }
 
@@ -168,7 +171,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-menu .drop-down ul a {
   padding: 10px 20px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   color: #151515;
 }
@@ -257,7 +260,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-nav a:hover, .mobile-nav .active > a, .mobile-nav li:hover > a {
-  color: #7cc576;
+  color: #008C8C;
   text-decoration: none;
 }
 
@@ -410,9 +413,20 @@ section {
 }
 
 .section-title h2 {
-  font-size: 32px;
+  font-size: 60px;
+  padding-left: 0px;
   font-weight: bold;
-  text-transform: uppercase;
+  /* text-transform: ; */
+  padding-bottom: 0;
+  color: #151515;
+}
+
+.section-title-2 h2 {
+  text-align: center;
+  padding-bottom: 40px;
+  font-size: 60px;
+  /* font-weight: bold; */
+  /* text-transform: uppercase; */
   margin-bottom: 15px;
   padding-bottom: 0;
   color: #151515;
@@ -431,46 +445,7 @@ section {
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
 } */
 
-.about .content .footer-newsletter {
-  text-align: right;
-  font-size: 15px;
-  margin-top: 30px;
-}
 
-.about .content .footer-newsletter form {
-  background: rgba(255, 255, 255, 0.719);
-  padding: 8px 8px;
-  position: relative;
-  border-radius: 50px;
-  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
-  text-align: left;
-}
-
-.about .content .footer-newsletter form input[type="text"] {
-  border: 0;
-  padding: 4px 50px;
-  width: calc(100% - 100px);
-}
-
-.about .content .footer-newsletter form input[type="submit"] {
-  position: absolute;
-  top: 0;
-  right: -1px;
-  bottom: 0;
-  border: 0;
-  background: none;
-  font-size: 16px;
-  padding: 0 20px;
-  background: #009961;
-  color: #fff;
-  transition: 0.3s;
-  border-radius: 50px;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.about .footer-newsletter form input[type="submit"]:hover {
-  background: #009961e1;
-}
 .about .content h3 {
   font-weight: 600;
   font-size: 26px;
@@ -490,7 +465,7 @@ section {
 .about .content ul i {
   font-size: 24px;
   padding: 2px 6px 0 0;
-  color: #7cc576;
+  color: #008C8C;
 }
 
 .about .content p:last-child {
@@ -505,7 +480,7 @@ section {
   margin-top: 50px;
   padding: 40px 30px;
   transition: all ease-in-out 0.3s;
-  background:  #009961;
+  background: #7FBBBB;
   box-shadow: 0px 5px 90px 0px rgba(110, 123, 131, 0.1);
   border-radius: 18px;
   border-bottom: 5px solid #fff;
@@ -521,7 +496,7 @@ section {
   justify-content: center;
   margin-bottom: 20px;
   transition: ease-in-out 0.3s;
-  color:  #009961;
+  color:  #7FBBBB;
 }
 
 .menu .icon-box .icon i {
@@ -549,66 +524,134 @@ section {
 .menu .icon-box:hover {
   transform: translateY(-10px);
   border-color: #015533;
-  background: rgba(0, 163, 103, 0.876);
+  background: rgba(0, 140, 140, 0.9);
 }
 
 .menu .icon-box:hover h4 a {
-  color:#015533;
+  color:#008C8C;
 }
 
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
-.services .icon-box {
-  padding: 60px 30px;
-  transition: all ease-in-out 0.3s;
-  background: #fefefe;
-  box-shadow: 0px 5px 90px 0px rgba(110, 123, 131, 0.1);
-  border-radius: 18px;
-  border-bottom: 5px solid #fff;
+
+.services .section-title-2 .footer-newsletter {
+  text-align: center;
+  font-size: 15px;
+  margin-top: 10px;
+  float: center;
 }
 
-.services .icon-box .icon {
-  width: 64px;
-  height: 64px;
-  background: #009961;
+.services  .footer-newsletter form {
+  background: rgba(255, 255, 255, 0.719);
+  padding: 10px 8px;
+  position: relative;
   border-radius: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-  transition: ease-in-out 0.3s;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.services .footer-newsletter form input[type="text"] {
+  border: 0;
+  padding: 4px 20px;
+  width: calc(100% - 100px);
+}
+
+.services .footer-newsletter form input[type="submit"] {
+  position: absolute;
+  top: 0;
+  right: -1px;
+  bottom: 0;
+  border: 0;
+  background: none;
+  font-size: 16px;
+  padding: 0 20px;
+  background: #009961;
+  color: #fff;
+  transition: 0.3s;
+  border-radius: 50px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.services .footer-newsletter form input[type="submit"]:hover {
+  background: #009961e1;
+}
+.services .section-title-2 h2{
+  text-align: center;
+  margin-top: 10px;
+  padding-bottom: 10px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.services .section-title-2 p{
+  font-size: 40px;
+  text-align: center;
+  padding-bottom: 10px;
+  font-family: "Montserrat", sans-serif;
+}
+.services .icon-box {
+  margin-top: 40px;
+  padding-top: 20px;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 0 29px 0 rgba(68, 88, 144, 0.12);
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
+  z-index: 1;
+}
+
+.services .icon-box::before {
+  content: '';
+  position: absolute;
+  background: #e1f0fa;
+  right: -60px;
+  top: -40px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  transition: all 0.3s;
+  z-index: -1;
+}
+
+.services .icon-box:hover::before {
+  background: #008C8C;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0px;
+}
+
+.services .icon {
+  margin: 0 auto 20px auto;
+  padding-top: 10px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background: #008C8C;
+  transition: all 0.3s ease-in-out;
+}
+
+.services .icon i {
+  font-size: 36px;
+  line-height: 1;
   color: #fff;
 }
 
-.services .icon-box .icon i {
-  font-size: 28px;
+.services .icon-box:hover .title a, .services .icon-box:hover .description {
+  color: #fff;
 }
 
-.services .icon-box h4 {
-  font-weight: 700;
-  margin-bottom: 15px;
-  font-size: 24px;
+.services .icon-box:hover .icon {
+  background: #fff;
 }
 
-.services .icon-box h4 a {
-  color: #282828;
-  transition: ease-in-out 0.3s;
-}
-
-.services .icon-box p {
-  line-height: 24px;
-  font-size: 14px;
-  margin-bottom: 0;
-}
-
-.services .icon-box:hover {
-  transform: translateY(-10px);
-  border-color: #009961;
-}
-
-.services .icon-box:hover h4 a {
-  color: #009961;
+.services .icon-box:hover .icon i {
+  color: #3498db;
 }
 /*--------------------------------------------------------------
 # Featured
@@ -1736,7 +1779,7 @@ section {
   position: relative;
   z-index: 2;
   text-align: center;
-  padding: 80px 0;
+  padding: 10px 0;
 }
 
 #footer .footer-top .footer-logo img {
@@ -1759,73 +1802,6 @@ section {
   margin: 30px 0 0 0;
   padding: 0;
 }
-
-#footer .footer-top .footer-newsletter {
-  text-align: center;
-  font-size: 15px;
-  margin-top: 30px;
-}
-
-#footer .footer-top .footer-newsletter form {
-  background: #fff;
-  padding: 6px 10px;
-  position: relative;
-  border-radius: 50px;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-  text-align: left;
-}
-
-#footer .footer-top .footer-newsletter form input[type="email"] {
-  border: 0;
-  padding: 4px 8px;
-  width: calc(100% - 100px);
-}
-
-#footer .footer-top .footer-newsletter form input[type="submit"] {
-  position: absolute;
-  top: 0;
-  right: -1px;
-  bottom: 0;
-  border: 0;
-  background: none;
-  font-size: 16px;
-  padding: 0 20px;
-  background: #7cc576;
-  color: #fff;
-  transition: 0.3s;
-  border-radius: 50px;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-}
-
-#footer .footer-top .footer-newsletter form input[type="submit"]:hover {
-  background: #5ab652;
-}
-
-#footer .footer-top .social-links {
-  margin-top: 30px;
-}
-
-#footer .footer-top .social-links a {
-  font-size: 18px;
-  display: inline-block;
-  background: #7cc576;
-  color: #fff;
-  line-height: 1;
-  padding: 8px 0;
-  margin-right: 4px;
-  border-radius: 50%;
-  text-align: center;
-  width: 36px;
-  height: 36px;
-  transition: 0.3s;
-}
-
-#footer .footer-top .social-links a:hover {
-  background: #5ab652;
-  color: #fff;
-  text-decoration: none;
-}
-
 #footer .footer-bottom {
   border-top: 1px solid #222222;
   z-index: 2;
@@ -1841,5 +1817,5 @@ section {
 #footer .credits {
   text-align: center;
   font-size: 13px;
-  padding-top: 5px;
+  padding-top:5px;
 }
