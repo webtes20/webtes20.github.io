@@ -1,0 +1,243 @@
+
+/*--------------------------------------------------------------
+# Kesehatan
+--------------------------------------------------------------*/
+.kesehatan {
+    background: whitesmoke;
+    padding: 30px 70px;
+  }
+
+.kesehatan .container-fluid{
+    margin: auto;
+    padding: 60px 60px 300px 60px
+}
+  
+  .kesehatan .section-title h2 {
+    font-weight: 400;
+    font-size: 60px;
+    color: #008C8C;
+  }
+  
+  .kesehatan .content h3 {
+    font-size: 34px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .kesehatan .content h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 5px;
+  }
+  
+  .kesehatan .content p {
+    font-size: 15px;
+    color: #959595;
+  }
+
+  .kesehatan .content-status{
+    padding-left: 40px;
+    padding-right: 40px;
+    margin: 0px;
+    justify-content: space-around;
+    text-align: center;
+  }
+
+  .kesehatan .content-data{
+    margin: auto;
+    padding: auto;
+    justify-content: space-around;
+    text-align: center;
+  }
+
+  .kesehatan .video-box {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 500px;
+    border-radius: 60px;
+    position: relative;
+  }
+  
+  .kesehatan .play-btn {
+    width: 94px;
+    height: 94px;
+    background: radial-gradient(#008C8C 50%,#03a5a5a2 52%);
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    left: calc(50% - 47px);
+    top: calc(50% - 47px);
+    overflow: hidden;
+  }
+  
+  .kesehatan .play-btn::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-40%) translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 15px solid #fff;
+    z-index: 100;
+    transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  
+  .kesehatan .play-btn::before {
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+    -webkit-animation: pulsate-btn 2s;
+    animation: pulsate-btn 2s;
+    -webkit-animation-direction: forwards;
+    animation-direction: forwards;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: steps;
+    animation-timing-function: steps;
+    opacity: 1;
+    border-radius: 50%;
+    border: 5px solid#027272;
+    top: -15%;
+    left: -15%;
+    background: rgba(198, 16, 0, 0);
+  }
+  
+  .kesehatan .play-btn:hover::after {
+    border-left: 15px solid#037575;
+    transform: scale(20);
+  }
+  
+  .kesehatan .play-btn:hover::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-40%) translateY(-50%);
+    width: 0;
+    height: 0;
+    border: none;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 15px solid #fff;
+    z-index: 200;
+    -webkit-animation: none;
+    animation: none;
+    border-radius: 0;
+  }
+  
+  @media (max-width: 992px) {
+    .kesehatan .content {
+      padding-top: 30px;
+    }
+    .kesehatan .container-fluid{
+      margin: auto;
+      padding: 0px;
+    }
+    .kesehatan .section-title h2 {
+      margin: auto;
+      padding-bottom: 0px;
+      font-size: 50px;
+      text-align: center;
+    }
+    .kesehatan .content h3 {
+      font-size: 25px;
+      text-align: center;
+      padding-bottom: 35px;
+    }
+  }
+
+  @media(max-width: 640px ){
+    .kesehatan .content-data table{
+      display: none;
+    }
+    .kesehatan .content-button .btn-explore{
+      padding: 10px;
+      padding-left: 8px;
+      margin: 20px;
+      width: 200px;
+      height: auto;
+      align-items: center;
+      text-align: center;
+    }
+  }
+  
+  @-webkit-keyframes pulsate-btn {
+    0% {
+      transform: scale(0.6, 0.6);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1, 1);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes pulsate-btn {
+    0% {
+      transform: scale(0.6, 0.6);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1, 1);
+      opacity: 0;
+    }
+  }
+
+
+/*--------------------------------------------------------------
+# Explore-Button
+--------------------------------------------------------------*/
+.content-button{
+  text-align: center;
+  margin: auto;
+  justify-content: center;
+}
+
+.content-button .btn-explore {
+  border-radius: 4px;
+  background-color: #008C8C;
+  border: none;
+  border-radius: 12px;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 20px;
+  padding: 10px;
+  width: 400px;
+  height: auto;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.content-button .btn-explore span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.content-button .btn-explore span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.content-button .btn-explore:hover span {
+  padding-right: 25px;
+}
+
+.content-button .btn-explore:hover span:after {
+  opacity: 1;
+  right: 0;
+  color: #fff;
+}
