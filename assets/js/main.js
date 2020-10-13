@@ -166,12 +166,22 @@
     });
   });
 
-  // Testimonials carousel (uses the Owl Carousel library)
-  $(".testimonials-carousel").owlCarousel({
+  // Berita carousel (uses the Owl Carousel library)
+  $(".berita-carousel").owlCarousel({
     autoplay: true,
     dots: true,
     loop: true,
-    items: 1
+    responsive: {
+      0: {
+        items: 1
+      },
+      768: {
+        items: 1
+      },
+      900: {
+        items: 3
+      }
+    }
   });
 
   // Portfolio details carousel
