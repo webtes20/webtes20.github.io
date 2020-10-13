@@ -118,6 +118,15 @@
     zIndex: '50'
   });
 
+
+  // Testimonials carousel (uses the Owl Carousel library)
+  $(".vokasi-carousel").owlCarousel({
+    autoplay: true,
+    dots: true,
+    loop: true,
+    items: 1
+  });
+
   // Back to top button
   $(window).scroll(function() {
     if ($(this).scrollTop() > 100) {
