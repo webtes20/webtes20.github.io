@@ -204,3 +204,10 @@
   });
 
 })(jQuery);
+
+
+// Alret send messange to email
+function submitMessage() {
+  if(pesan)
+  alert('Pesan sukses terkirim !!!');  
+}

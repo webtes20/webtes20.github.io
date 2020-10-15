@@ -9,7 +9,7 @@ $form_message = $_REQUEST['Message'];
 if(empty($form_name) || empty($form_email) || empty($form_message)){
   echo "Data belum diisikan";
 }else{
-  mail("dhikihans1@gmail.com", $form_subject, $form_message, "from: #form_name <$form_email>");
+  mail("dhikihans1@gmail.com", $form_subject, $form_message, "from: Vokasi in New Era <$form_email>");
   echo "<script type='text/javascript'>alret('Pesan sukses terkirim');
   window.history.log(-1);
   </script>";
