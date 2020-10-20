@@ -323,6 +323,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 100vh;
   /* background: linear-gradient(to right, rgba(39, 70, 133, 0.8) 0%, rgba(61, 179, 197, 0.8) 100%), url("../img/hero-bg.png"); */
   background: url("../img/hero-bg.png");
+ 
   position: relative;
   padding-right: 10px;
 }
