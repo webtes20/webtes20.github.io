@@ -323,7 +323,6 @@ h1, h2, h3, h4, h5, h6 {
   height: 100vh;
   /* background: linear-gradient(to right, rgba(39, 70, 133, 0.8) 0%, rgba(61, 179, 197, 0.8) 100%), url("../img/hero-bg.png"); */
   background: url("../img/hero-bg.png");
- 
   position: relative;
   padding-right: 10px;
 }
@@ -393,13 +392,20 @@ h1, h2, h3, h4, h5, h6 {
   color: #ffffff;
 }
 
-@media (min-width: 1024px) {
-  #hero {
-    background-attachment: fixed;
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 767.98px) and (max-width: 991.98px) {
+  .hero-container{
+    padding: 0px;
+    margin: auto;
   }
+  #hero h3 {
+    padding: 10px 10px 10px 70px;
+  }
+
 }
 
-@media (max-width: 768px) {
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 767.98px) {
   #hero h1 {
     font-size: 28px;
     line-height: 36px;
@@ -767,6 +773,7 @@ padding-bottom: 0px;
 
 .vokasi{
   background: url("../img/vokasi.png");
+  background-size: cover;
 }
 .vokasi {
   padding: 30px 70px;
@@ -854,6 +861,15 @@ padding-bottom: 0px;
     transform: scale(1, 1);
     opacity: 0;
   }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 767.98px) and (max-width: 991.98px) {
+  .vokasi .video-box img {
+    max-width: 100%;
+    padding: 10px 10px;
+  }
+
 }
 
 /*--------------------------------------------------------------
