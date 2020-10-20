@@ -3,36 +3,74 @@
 # Kesehatan
 --------------------------------------------------------------*/
 .kesehatan {
-    background: whitesmoke;
-    padding: 30px 70px;
+    background: white;
+    padding: 30px 30px;
   }
 
+  .kesehatan .section-title{
+    padding-left: 70px;
+  }
 .kesehatan .container-fluid{
     margin: auto;
-    padding: 60px 60px 300px 60px
+    padding: 50px 50px 50px 50px;
+    margin-top: 50px;
+     margin-right: 50px;
+     margin-left: 10px;
 }
-  
+ 
+.kesehatan .tes{
+    margin: auto;
+    padding: 60px 60px 60px 60px;
+}
+
   .kesehatan .section-title h2 {
     font-weight: 400;
     font-size: 60px;
     color: #008C8C;
   }
-  
+  .kesehatan .section-title p {
+  text-align: left;
+  float : left;
+  font-style: italic;
+  color: #666;
+  }
+
+  .kesehatan .section-img img {
+			  display: block;
+			  margin-left: auto;
+			  margin-right: auto;    
+			}
+
+.kesehatan .tabel1 table, th, td {
+		  
+		  border-collapse: collapse;
+          text-align: center;
+		}
+.Kesehatan .center p{
+    text-align: left
+    }
+
+.kesehatan .tabel2 th, td {
+		  padding: 5px;
+        }
   .kesehatan .content h3 {
     font-size: 34px;
-    text-align: center;
+    text-align: left;
     margin-bottom: 30px;
+    font-family: "Century Gothic";
   }
   
   .kesehatan .content h4 {
     font-size: 20px;
     font-weight: 700;
     margin-top: 5px;
+    font-family: "Century Gothic";
   }
   
   .kesehatan .content p {
-    font-size: 15px;
+    font-size: 18px;
     color: #959595;
+    font-family: "Century Gothic";
   }
 
   .kesehatan .content-status{
@@ -153,6 +191,34 @@
     }
   }
 
+.details .content + .content {
+  margin-top: 100px;
+}
+
+.details .content h3 {
+  font-weight: 700;
+  font-size: 32px;
+  color: #47536e;
+}
+
+.details .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.details .content ul li {
+  padding-bottom: 10px;
+}
+
+.details .content ul i {
+  font-size: 20px;
+  padding-right: 4px;
+  color: #5777ba;
+}
+
+.details .content p:last-child {
+  margin-bottom: 0;
+}
   @media(max-width: 640px ){
     .kesehatan .content-data table{
       display: none;
