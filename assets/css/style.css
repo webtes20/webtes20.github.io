@@ -323,6 +323,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 100vh;
   /* background: linear-gradient(to right, rgba(39, 70, 133, 0.8) 0%, rgba(61, 179, 197, 0.8) 100%), url("../img/hero-bg.png"); */
   background: url("../img/hero-bg.png");
+  background-size: auto;
   position: relative;
   padding-right: 10px;
 }
@@ -342,24 +343,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-#hero h1 {
-  margin-top: 200px;
-  padding-left: 70px;
-  float: left;
-  font-style: bold;
-  font-size: 48px;
-  font-weight: bold;
-  line-height: 56px;
-  color:#008C8C;
-}
-
 #hero h2 {
   color: #000000;
   padding-left: 70px;
-  margin-bottom: 30px;
-  font-size: 40px;
+  margin-top: 200px;
+  font-size: 35px;
   font-weight: 400;
   /* text-transform: uppercase; */
+}
+
+#hero h1 {
+  padding: 25px 0px 25px 70px;
+  float: left;
+  font-style: bold;
+  font-size: 70px;
+  font-weight: bold;
+  line-height: 56px;
+  color:#008C8C;
 }
 
 #hero h3 {
@@ -367,30 +367,111 @@ h1, h2, h3, h4, h5, h6 {
   padding-left: 70px;
   padding-right: 800px;
   margin-bottom: 30px;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 400;
   /* text-transform: uppercase; */
 }
 
-#hero .btn-get-started {
+  #hero .hero-container .btn-explore {
+  border-radius: 4px;
+  background-color: #008C8C;
+  border: none;
+  border-radius: 12px;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  padding: 10px;
+  width: 200px;
+  height: auto;
+  transition: all 0.5s;
+  cursor: pointer;
   margin-left: 70px;
-  width: 300px;
-  color: rgb(255, 255, 255);
-  border-radius: 50px;
-  padding: 6px 25px 7px 20px;
-  white-space: nowrap;
-  transition: 0.3s;
-  font-size: 20px;
+  }
+  
+  .btn-explore span {
+  cursor: pointer;
   display: inline-block;
-  /* border: 2px solid #f1f8fc; */
-  background-color:#008C8C;
-}
+  position: relative;
+  transition: 0.5s;
+  }
+  
+  .btn-explore span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+  }
+  
+  .btn-explore:hover span {
+  padding-right: 25px;
+  }
+  
+  .btn-explore:hover span:after {
+  opacity: 1;
+  right: 0;
+  color: #fff;
+  }
 
+  #hero .virus img{
+    width: 50px;
+    animation: virus 7s linear infinite;
+  }
+  
+  #hero .virus{
+    width: 100%;
+    display:flex;
+    align-items: center;
+    justify-content:space-around;
+    position:absolute;
+    bottom: 0;
+  }
+  
+  @keyframes virus{
+    0% {
+      transform : translateY(0);
+      opacity: 0;
+    }
+  
+    50% {
+      
+      opacity: 1;
+    }
+  
+    70% {
+   
+      opacity: 1;
+    }
+  
+    100% {
+      transform : translateY(-80vh);
+      opacity: 0;
+    }
+  }
+  
+  #hero .virus img:nth-child(1){
+    animation-delay: 2s;
+  }
+  #hero .virus img:nth-child(2){
+    animation-delay: 1s;
+  }
+  #hero .virus img:nth-child(3){
+    animation-delay: 3s;
+  }
+  #hero .virus img:nth-child(4){
+    animation-delay: 4s;
+  }
+  #hero .virus img:nth-child(5){
+    animation-delay: 3s;
+  }
+  #hero .virus img:nth-child(6){
+    animation-delay: 6s;
+  }
+  #hero .virus img:nth-child(7){
+    animation-delay: 7s;
+  }
 
-#hero .btn-get-started:hover {
-  background: rgb(0, 194, 184);
-  color: #ffffff;
-}
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 767.98px) and (max-width: 991.98px) {
@@ -419,7 +500,6 @@ h1, h2, h3, h4, h5, h6 {
 # Sections General
 --------------------------------------------------------------*/
 section {
-
   margin-left: 0px;
   padding: 60px 70px;
   overflow: hidden;
@@ -461,22 +541,29 @@ section {
   color: #aeaeae;
 }
 
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 767.98px) and (max-width: 991.98px) {
+  .section-title h2 {
+    text-align: left;
+  }
+}
+
 /*--------------------------------------------------------------
-# About Us
+# Tentang Kami
 --------------------------------------------------------------*/
 .about .image {
   padding: 10px;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-  max-width: 70%;
+  max-width: 100%;
   margin-bottom: 100px;
+  float: right;
 }
 
 .about {
   width: auto;
-  padding-bottom: 0px;
+  padding-bottom: auto;
   background: url("../img/tentangkami.png");
 }
-
 
 .about .container-fluid{
 padding: 0x 70x;
@@ -575,13 +662,14 @@ padding-bottom: 0px;
 }
 
 /*--------------------------------------------------------------
-# Services
+# Layanan Section
 --------------------------------------------------------------*/
 .services{
   background: url("../img/Layanan.png");
 }
 .services .continer-fluid{
-  padding: 0px 70px;
+  padding: 0x 70x;
+  padding-bottom: 0px;
 }
 .services .section-title-2 .footer-newsletter {
   text-align: center;
@@ -612,7 +700,7 @@ padding-bottom: 0px;
   bottom: 0;
   border: 0;
   background: none;
-  font-size: 16px;
+  font-size: 20px;
   padding: 0 20px;
   background: #008C8C;
   color: #fff;
@@ -702,6 +790,10 @@ padding-bottom: 0px;
 .services .icon-box:hover .icon i {
   color: #3498db;
 }
+
+.description {
+  font-size: 20px;
+}
 /*--------------------------------------------------------------
 # Featured
 --------------------------------------------------------------*/
@@ -768,21 +860,17 @@ padding-bottom: 0px;
 }
 
 /*--------------------------------------------------------------
-# pendidikan vokasi
+# Vokasi Section
 --------------------------------------------------------------*/
 
 .vokasi{
   background: url("../img/vokasi.png");
   background-size: cover;
 }
-.vokasi {
-  padding: 30px 70px;
-}
 
 .vokasi .container-fluid{
-  margin: auto;
-  padding: 30px 30px;
-  /* box-shadow: 0 5px 25px 0 rgba(214, 215, 216, 0.6); */
+  padding: 0x 70x;
+  padding-bottom: 0px;
 }
 
 .vokasi .container {
@@ -802,8 +890,8 @@ padding-bottom: 0px;
 }
 
 .vokasi .section-title p {
+  font-size: 20px;
   text-align: left;
-  font-style: italic;
   color: #666;
 }
 
@@ -811,12 +899,18 @@ padding-bottom: 0px;
   padding: 10px;
 }
 
+.vokasi .icon-boxes .row{
+  margin: 20px 0px;
+}
+
+
 .vokasi .icon-boxes .icon-box {
   justify-content: center;
   text-align: center;
   padding-right: 20px;
   padding-bottom: 20px;
   margin-top: 10px;
+  box-shadow: 2px 2px 2px 2px rgba(68, 88, 144, 0.2);
 }
 
 .vokasi .icon-boxes .icon-box i {
@@ -832,13 +926,55 @@ padding-bottom: 0px;
 }
 
 .vokasi .icon-boxes .icon-box p {
-  font-size: 15px;
+  font-size: 18px;
   color: #848484;
 }
 
 .vokasi .video-box {
   position: relative;
 }
+
+  .vokasi .content-button{
+  border-radius: 4px;
+  background-color: #008C8C;
+  border-radius: 12px;
+  color: #FFFFFF;
+  font-size: 20px;
+  height: auto;
+  width: 500px;
+  padding: 10px;
+  margin: auto;
+  transition: all 0.5s;
+  cursor: pointer;
+  text-align: center;
+  justify-content: center;
+  }
+  
+  .vokasi .content-button .btn-explore span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  }
+  
+  .vokasi .content-button .btn-explore span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+  }
+  
+  .vokasi .content-button .btn-explore:hover span {
+  padding-right: 25px;
+  }
+  
+  .vokasi .content-button .btn-explore:hover span:after {
+  opacity: 1;
+  right: 0;
+  color: #fff;
+  }
 
 
 @-webkit-keyframes pulsate-btn {
@@ -875,22 +1011,14 @@ padding-bottom: 0px;
 /*--------------------------------------------------------------
 # Kesehatan
 --------------------------------------------------------------*/
-
-.kesehatan {
-  padding: 30px 70px;
+.kesehatan .section-title h2 {
+  text-align: center;
 }
 
 .kesehatan .container-fluid{
-  margin: auto;
-  padding: 60px 60px 200px 60px;
-  /* box-shadow: 0 5px 25px 0 rgba(214, 215, 216, 0.6); */
+  padding: 0x 70x;
+  padding-bottom: 0px;
 }
-/* 
-.kesehatan .section-title h2 {
-  font-weight: 400;
-  font-size: 60px;
-  color: #008C8C;
-} */
 
 .kesehatan .content h3 {
   font-size: 34px;
@@ -1006,20 +1134,12 @@ padding-bottom: 0px;
   border-radius: 0;
 }
 
-@media (max-width: 992px) {
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 767.98px) and (max-width: 991.98px) {
   .kesehatan .content {
     padding-top: 30px;
   }
-  .kesehatan .container-fluid{
-    margin: auto;
-    padding: 0px;
-  }
-  .kesehatan .section-title h2 {
-    margin: auto;
-    padding-bottom: 0px;
-    font-size: 50px;
-    text-align: center;
-  }
+
   .kesehatan .content h3 {
     font-size: 25px;
     text-align: center;
@@ -1067,18 +1187,72 @@ padding-bottom: 0px;
 }
 
 /*--------------------------------------------------------------
-# berita
+# Explore-Button
 --------------------------------------------------------------*/
-/* .berita{
+.content-button{
+  padding-top: 20px;
+  padding-right: 45px;
+  padding-bottom: 10px;
+  text-align: center;
+  margin: auto;
+  justify-content: center;
+  }
+
+  .content-button a{
+    height: auto;
+    width: 500px;
+  }
+  
+  .content-button .btn-explore {
+  border-radius: 4px;
+  background-color: #008C8C;
+  border-radius: 12px;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  padding: 10px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  }
+  
+  .content-button .btn-explore span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  }
+  
+  .content-button .btn-explore span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+  }
+  
+  .content-button .btn-explore:hover span {
+  padding-right: 25px;
+  }
+  
+  .content-button .btn-explore:hover span:after {
+  opacity: 1;
+  right: 0;
+  color: #fff;
+  }
+
+
+/*--------------------------------------------------------------
+# Berita Section
+--------------------------------------------------------------*/
+.berita{
   background: url("../img/berita.png");
-} */
-.berita {
-  padding: 30px 70px;
 }
 
 .berita .container-fluid{
-  margin: auto;
-  padding: 60px 60px 60px 60px;
+  padding: 0x 70x;
+  padding-bottom: 0px;
 }
 
 .berita .berita_up-wrap {
@@ -1203,7 +1377,6 @@ padding-bottom: 0px;
   position: relative;
 }
 
-
 @-webkit-keyframes pulsate-btn {
   0% {
     transform: scale(0.6, 0.6);
@@ -1228,24 +1401,20 @@ padding-bottom: 0px;
 
 
 /*--------------------------------------------------------------
-# Kesehatan
+# Hiburan Section
 --------------------------------------------------------------*/
+.hiburan .section-title h2{
+  text-align: center;
+}
+
 .hiburan {
-  padding: 30px 70px;
   background: url("../img/hiburan.png");
 }
 
 .hiburan .container-fluid{
-  margin: auto;
-  padding: 60px 60px 200px 60px;
-  /* box-shadow: 0 5px 25px 0 rgba(214, 215, 216, 0.6); */
+  padding: 0x 70x;
+padding-bottom: 0px;
 }
-/* 
-.kesehatan .section-title h2 {
-  font-weight: 400;
-  font-size: 60px;
-  color: #008C8C;
-} */
 
 .hiburan .icon-box {
   text-align: center;
@@ -1322,61 +1491,6 @@ padding-bottom: 0px;
 .hiburan .icon-box:hover h4 a, .services .icon-box:hover p {
   color: #fff;
 }
-
-/*--------------------------------------------------------------
-# Explore-Button
---------------------------------------------------------------*/
-.content-button{
-  padding-top: 20px;
-  padding-right: 45px;
-  padding-bottom: 10px;
-  text-align: right;
-  margin: auto;
-  justify-content: left;
-  }
-  
-  .content-button .btn-explore {
-  border-radius: 4px;
-  background-color: #008C8C;
-  border: none;
-  border-radius: 12px;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 15px;
-  padding: 10px;
-  width: 400px;
-  height: auto;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
-  }
-  
-  .content-button .btn-explore span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-  }
-  
-  .content-button .btn-explore span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-  }
-  
-  .content-button .btn-explore:hover span {
-  padding-right: 25px;
-  }
-  
-  .content-button .btn-explore:hover span:after {
-  opacity: 1;
-  right: 0;
-  color: #fff;
-  }
-
 
 /*--------------------------------------------------------------
 # Testimonials
@@ -1477,10 +1591,13 @@ padding-bottom: 0px;
 /*--------------------------------------------------------------
 # Our Team
 --------------------------------------------------------------*/
-.team {
-  /* background: url("../img/tim.png"); */
-  /* background: #fff; */
-  padding: 60px 0 30px 0;
+.team .section-title h2 {
+  text-align: center;
+}
+
+.team .section-title p {
+  font-size: 20px;
+  text-align: center;
 }
 
 .team .member {
@@ -1565,185 +1682,16 @@ padding-bottom: 0px;
 
 
 /*--------------------------------------------------------------
-# Pricing
---------------------------------------------------------------*/
-.pricing .box {
-  padding: 20px;
-  background: #fff;
-  text-align: center;
-  border-radius: 8px;
-  position: relative;
-  overflow: hidden;
-  border: 1px solid #fff;
-}
-
-.pricing .box h3 {
-  font-weight: 400;
-  padding: 15px;
-  margin-top: 15px;
-  font-size: 18px;
-  font-weight: 600;
-  color: #151515;
-}
-
-.pricing .box h4 {
-  font-size: 42px;
-  color: #151515;
-  font-weight: 700;
-  font-family: "Open Sans", sans-serif;
-  margin-bottom: 20px;
-}
-
-.pricing .box h4 sup {
-  font-size: 20px;
-  top: -15px;
-  left: -3px;
-}
-
-.pricing .box h4 span {
-  color: #bababa;
-  font-size: 16px;
-  font-weight: 300;
-}
-
-.pricing .box ul {
-  padding: 0;
-  list-style: none;
-  color: #151515;
-  text-align: center;
-  line-height: 20px;
-  font-size: 14px;
-}
-
-.pricing .box ul li {
-  padding-bottom: 16px;
-}
-
-.pricing .box ul i {
-  color: #008C8C;
-  font-size: 18px;
-  padding-right: 4px;
-}
-
-.pricing .box ul .na {
-  color: #ccc;
-  text-decoration: line-through;
-}
-
-.pricing .box .btn-wrap {
-  padding: 15px;
-  text-align: center;
-}
-
-.pricing .box .btn-buy {
-  display: inline-block;
-  padding: 10px 40px 12px 40px;
-  border-radius: 5px;
-  border: 2px solid #008C8C;
-  color: #008C8C;
-  font-size: 14px;
-  font-weight: 400;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-.pricing .box .btn-buy:hover {
-  background: #008C8C;
-  color: #fff;
-}
-
-.pricing .recommended {
-  border-color: #008C8C;
-}
-
-.pricing .recommended .btn-buy {
-  background: #008C8C;
-  color: #fff;
-}
-
-.pricing .recommended .btn-buy:hover {
-  background: #61b959;
-  border-color: #61b959;
-}
-
-.pricing .recommended-badge {
-  position: absolute;
-  top: 5px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-  font-size: 12px;
-  padding: 4px 25px 6px 25px;
-  background: #eaf6e9;
-  color: #008C8C;
-  border-radius: 50px;
-  text-transform: uppercase;
-  font-weight: 600;
-}
-
-/*--------------------------------------------------------------
-# Frequently Asked Questions
---------------------------------------------------------------*/
-.faq .faq-list {
-  padding: 0;
-  list-style: none;
-}
-
-.faq .faq-list li {
-  border-bottom: 1px solid #eee;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-}
-
-.faq .faq-list a {
-  display: block;
-  position: relative;
-  font-family: #008C8C;
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 400;
-  padding-right: 25px;
-}
-
-.faq .faq-list i {
-  font-size: 24px;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-.faq .faq-list p {
-  margin-bottom: 0;
-  padding: 10px 0 0 0;
-}
-
-.faq .faq-list .icon-show {
-  display: none;
-}
-
-.faq .faq-list a.collapsed {
-  color: #343a40;
-}
-
-.faq .faq-list a.collapsed:hover {
-  color: #008C8C;
-}
-
-.faq .faq-list a.collapsed .icon-show {
-  display: inline-block;
-}
-
-.faq .faq-list a.collapsed .icon-close {
-  display: none;
-}
-
-/*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
 .contact{
   background: url("../img/kontak.png");
 }
+
+.contact .section-title h2{
+  text-align: center;
+}
+
 .contact .info {
   width: 100%;
   height: 100%;
