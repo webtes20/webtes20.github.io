@@ -45,19 +45,19 @@
       <nav class="nav-menu d-none d-lg-block">
         <ul class="nav-inner">
           <!-- <li class="nav-logo"><a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a></li> -->
-          <li class="active"><a href="..//index.html">Halaman utama</a></li>
-          <li><a href="#about">Tentang</a></li>
+          <li><a href="../index.html">Halaman utama</a></li>
+          <li><a href="../index.html#about">Tentang</a></li>
           <li class="drop-down"><a href="#services">Layanan</a>
             <ul>
               
-              <li><a href="#">Pendidikan Vokasi</a></li>
-              <li><a href="#">Kesehatan</a></li>
-              <li><a href="#">Berita</a></li>
-              <li><a href="#">Hiburan</a></li>
+              <li><a href="../public/vokasi.html">Pendidikan Vokasi</a></li>
+              <li><a href="../public/kesehatan.html">Kesehatan</a></li>
+              <li><a href="../index.html#berita">Berita</a></li>
+              <li><a href="../index.html#hiburan">Hiburan</a></li>
 
             </ul>
           </li>
-          <li><a href="#">Kontak</a></li>
+          <li><a href="../index.html#contact">Kontak</a></li>
 
         </ul>
       </nav>
@@ -71,10 +71,8 @@
     <!-- ======= Section Kesehatan ======= -->
     
     <section id="kesehatan" class="kesehatan ">
-     
-        <div class="section-title">
-          <h2>Kesehatan</h2>
-      
+    <div class="section-title">
+          <h2>Kesehatan</h2>     
       </div>
      <section id="details" class="details">
       <script src="https://apps.elfsight.com/p/platform.js" defer></script>
@@ -200,6 +198,78 @@
     
 
     </section><!-- End Why Us Section -->
+
+     <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Kontak</h2>
+          <!-- <p>Magnam dolores commodi suscipit eius consequatur ex aliquid fuga eum quidem</p> -->
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4">
+            <div class="info d-flex flex-column justify-content-center" data-aos="fade-right">
+              <div class="address">
+                <i class="icofont-google-map"></i>
+                <h4>Location:</h4>
+                <p>Institut Teknologi Sepuluh Nopember</p>
+              </div>
+
+              <div class="email">
+                <i class="icofont-envelope"></i>
+                <h4>Email:</h4>
+                <p>vokasiinnewera@gmail.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="icofont-phone"></i>
+                <h4>Call:</h4>
+                <p>+62812 2401 8733</p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-8 mt-5 mt-lg-0">
+
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form" data-aos="fade-left">
+              <div class="form-row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Nama Lengkap" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validate"></div>
+                </div>
+                <div class="col-md-6 form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Email" data-rule="email" data-msg="Please enter a valid email" />
+                  <div class="validate"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subjek" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Pesan"></textarea>
+                <div class="validate"></div>
+              </div>
+              <div class="mb-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Kirim Pesan</button></div>
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
   </main><!-- End #main -->
 
    <!-- ======= Footer ======= -->
